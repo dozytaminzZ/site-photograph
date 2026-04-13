@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакты фотографа Виктора Корнеплода, форма заявки на съёмку.">
+  <title>Better take photos at Viktor's — контакты</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3.5" y="6.5" width="17" height="11" rx="3"></rect>
+            <path d="M8 6.5 9.7 4.5h4.6L16 6.5"></path>
+            <circle cx="12" cy="12" r="3.3"></circle>
+          </svg>
+        </span>
+        <span class="brand-text">Better take photos at Viktor's<br><small>photography</small></span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle>Меню</button>
+      <nav class="nav">
+        <a class="" href="./index.html">Главная</a>
+        <a class="" href="./portfolio.html">Портфолио</a>
+        <a class="" href="./services.html">Услуги</a>
+        <a class="" href="./about.html">Обо мне</a>
+        <a class="active" href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container section-title reveal">
+        <span class="eyebrow">Контакты</span>
+        <h1 style="max-width: 11ch;">Напишите, если хотите съёмку с вашим настроением</h1>
+        <p class="lead">Расскажите, какой формат вам нужен: портрет, семейная история, пара, съёмка для проекта или бренда. Я подскажу по локации, времени и помогу выбрать комфортный формат.</p>
+      </div>
+      <div class="container contact-grid">
+        <article class="contact-card reveal">
+          <h2>Как связаться</h2>
+          <ul class="contact-list">
+            <li>Телефон: +7 (800) 555-35-35</li>
+            <li>E-mail: viktorsphoto@gmail.com</li>
+            <li>Город: Томск</li>
+            <li>Ответ в течение дня с 10:00 до 20:00</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-secondary" href="https://2gis.ru/tomsk" target="_blank" rel="noopener noreferrer">Где проходят съёмки</a>
+          </div>
+        </article>
+        <div class="form-wrap reveal d2">
+          <form id="feedback-form">
+            <label>Имя
+              <input type="text" name="name" placeholder="Ваше имя" required>
+            </label>
+            <label>Телефон или e-mail
+              <input type="text" name="contact" placeholder="Как с вами связаться" required>
+            </label>
+            <label>Что вы хотите снять
+              <textarea name="message" placeholder="Опишите формат, дату и пожелания" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Отправить заявку</button>
+            <p class="small-note" id="form-note">После отправки на странице появится подтверждение.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title reveal">
+          <span class="eyebrow">Локации</span>
+          <h2>Снимаю в городе, на природе и в студии</h2>
+          <p class="lead">Чаще всего съёмки проходят в Томске и рядом с городом. По ссылке ниже можно открыть карту и обсудить удобную для вас точку.</p>
+        </div>
+        <a class="contact-map-link reveal d2" href="https://2gis.ru/tomsk" target="_blank" rel="noopener noreferrer">
+          <div class="map-box">
+            <div>
+              <strong>Томск и окрестности</strong>
+              <span>Прогулочные локации, студии и спокойные городские пространства для съёмки.</span>
+              <span class="map-open">Открыть карту города ↗</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Better take photos at Viktor's — портретная, семейная и lifestyle-фотография в Томске.</p>
+      <div class="socials">
+        <a href="https://www.vk.com/" target="_blank" rel="noopener noreferrer">VK</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const nav = document.querySelector('.nav');
+      const menuBtn = document.querySelector('[data-menu-toggle]');
+      const form = document.getElementById('feedback-form');
+      const note = document.getElementById('form-note');
+      if (menuBtn) menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const name = new FormData(form).get('name') || 'друг';
+        note.textContent = 'Спасибо, ' + name + '! Я свяжусь с вами после подтверждения даты и деталей съёмки.';
+        form.reset();
+      });
+    })();
+  </script> <!--перехватываем отправку формы -> достаём имя -> показываем сообщение -> очищаем поля-->
+</body>
+</html>

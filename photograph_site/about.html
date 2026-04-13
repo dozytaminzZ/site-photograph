@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="О фотографе Викторе Корнеплоде и его подходе к съёмке.">
+  <title>Better take photos at Viktor's — обо мне</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <!-- снизу внутренний стиль -->
+  <style>
+    .author-box { padding: 2rem; }
+    .author-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 1.5rem; align-items: stretch; }
+    .author-photo-real { min-height: 420px; border-radius: 1.4rem; box-shadow: var(--shadow-sm); }
+    .timeline { margin-top: 1.2rem; gap: 1rem; }
+    .timeline li { padding: 1rem 1rem 1rem 1.2rem; border-left: 3px solid var(--color-primary-soft); background: color-mix(in srgb, var(--color-surface-offset) 52%, transparent); border-radius: 0 1rem 1rem 0; list-style: none; }
+    .timeline span { display: block; color: var(--color-primary); font-weight: 800; margin-bottom: 0.25rem; }
+    @media (max-width: 900px) { .author-grid { grid-template-columns: 1fr; } .author-photo-real { min-height: 300px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3.5" y="6.5" width="17" height="11" rx="3"></rect>
+            <path d="M8 6.5 9.7 4.5h4.6L16 6.5"></path>
+            <circle cx="12" cy="12" r="3.3"></circle>
+          </svg>
+        </span>
+        <span class="brand-text">Better take photos at Viktor's<br><small>photography</small></span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle>Меню</button>
+      <nav class="nav">
+        <a class="" href="./index.html">Главная</a>
+        <a class="" href="./portfolio.html">Портфолио</a>
+        <a class="" href="./services.html">Услуги</a>
+        <a class="active" href="./about.html">Обо мне</a>
+        <a class="" href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container section-title reveal">
+        <span class="eyebrow">Обо мне</span>
+        <!-- снизу инлайн стиль -->
+        <h1 style="max-width: 12ch;">Фотограф, которому важны человек и атмосфера</h1> 
+        <p class="lead">Я пришел в фотографию через любовь к наблюдению за простыми моментами: взглядом, движением руки, тишиной в кадре, светом на коже. Со временем это выросло в постоянную практику и работу с частными клиентами и локальными брендами.</p>
+      </div>
+      <div class="container card author-box reveal d2">
+        <div class="author-grid">
+          <img class="author-photo-real" src="images/victor-korneplod.jpg" alt="Фотограф Виктор Корнеплод" width="900" height="1200" loading="lazy">
+          <div>
+            <h2>Виктор Корнеплод</h2>
+            <p>Мне близки спокойные съёмки, в которых человек не играет роль, а просто остаётся собой. Я много работаю с естественным светом, мягкой цветокоррекцией и ритмом серии, чтобы итоговые фотографии выглядели актуально не один сезон.</p>
+            <!-- снизу инлайн стиль -->
+            <p style="background: var(--color-primary-soft); padding: 0.9rem 1rem; border-radius: 1rem;">Если вы волнуетесь перед камерой — это нормально. Я умею выстраивать процесс так, чтобы постепенно ушло напряжение и появилась лёгкость.</p>
+            <ul class="timeline">
+              <li><span>Портреты</span>Женские и мужские съёмки, творческие серии, кадры для личного бренда.</li>
+              <li><span>Семья</span>Ненавязчивые съёмки дома, на прогулке или в студии без жёсткой постановки.</li>
+              <li><span>Контент</span>Визуал для брендов, мастерских и камерных проектов.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Better take photos at Viktor's — портретная, семейная и lifestyle-фотография в Томске.</p>
+      <div class="socials">
+        <a href="https://www.vk.com/" target="_blank" rel="noopener noreferrer">VK</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const nav = document.querySelector('.nav');
+      const menuBtn = document.querySelector('[data-menu-toggle]');
+      if (menuBtn) menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+    })();
+  </script>
+</body>
+</html>

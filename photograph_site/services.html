@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Услуги фотографа Виктора Корнеплода: портретная, семейная и брендовая съёмка.">
+  <title>Better take photos at Viktor's — услуги</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3.5" y="6.5" width="17" height="11" rx="3"></rect>
+            <path d="M8 6.5 9.7 4.5h4.6L16 6.5"></path>
+            <circle cx="12" cy="12" r="3.3"></circle>
+          </svg>
+        </span>
+        <span class="brand-text">Better take photos at Viktor's<br><small>photography</small></span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle>Меню</button>
+      <nav class="nav">
+        <a class="" href="./index.html">Главная</a>
+        <a class="" href="./portfolio.html">Портфолио</a>
+        <a class="active" href="./services.html">Услуги</a>
+        <a class="" href="./about.html">Обо мне</a>
+        <a class="" href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container section-title reveal">
+        <span class="eyebrow">Услуги</span>
+        <h1 style="max-width: 11ch;">Форматы съёмки под разные задачи</h1>
+        <p class="lead">Каждая съёмка начинается с короткого знакомства и обсуждения идеи. Я помогаю определиться с локацией, одеждой и настроением серии, чтобы день съёмки прошёл спокойно и без спешки.</p>
+      </div>
+      <div class="container pricing-grid">
+        <article class="price-card reveal">
+          <span class="badge">Портрет</span>
+          <h3>Индивидуальная съёмка</h3>
+          <p>Для личного архива, социальных сетей, творческих проектов или профессионального профиля.</p>
+          <ul class="service-list">
+            <li>До 1,5 часа съёмки.</li>
+            <li>Подбор локации и образа.</li>
+            <li>15 фотографий в авторской обработке.</li>
+          </ul>
+          <div class="price">от 4 500 ₽</div>
+        </article>
+        <article class="price-card reveal d2" style="border-color: rgba(47,111,183,0.28);">
+          <span class="badge">Семья</span>
+          <h3>Семейная история</h3>
+          <p>Подойдёт для прогулки, домашней съёмки или спокойной встречи в студии.</p>
+          <ul class="service-list">
+            <li>До 2 часов съёмки.</li>
+            <li>20 фотографий в обработке.</li>
+            <li>Рекомендации по одежде для всей семьи.</li>
+          </ul>
+          <div class="price">от 6 000 ₽</div>
+        </article>
+        <article class="price-card reveal d3">
+          <span class="badge">Бренд</span>
+          <h3>Контент для проекта</h3>
+          <p>Для небольших брендов, мастерских, студий и авторских продуктов.</p>
+          <ul class="service-list">
+            <li>Съёмка товара, пространства и процесса.</li>
+            <li>Подготовка кадров под сайт и соцсети.</li>
+            <li>Согласование задачи до съёмки.</li>
+          </ul>
+          <div class="price">от 7 500 ₽</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cards-3">
+        <article class="card reveal">
+          <h3>Перед съёмкой</h3>
+          <p>Обсуждаем идею, выбираем локацию, время и одежду. При необходимости я собираю небольшой визуальный ориентир.</p>
+        </article>
+        <article class="card reveal d2">
+          <h3>Во время съёмки</h3>
+          <p>Я направляю по позам и движениям, но не делаю кадр слишком жёстким. Главное — оставить место живому состоянию.</p>
+        </article>
+        <article class="card reveal d3">
+          <h3>После съёмки</h3>
+          <p>Вы получаете отобранную серию в обработке и удобную онлайн-галерею для просмотра и скачивания.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Better take photos at Viktor's — портретная, семейная и lifestyle-фотография в Томске.</p>
+      <div class="socials">
+        <a href="https://www.vk.com/" target="_blank" rel="noopener noreferrer">VK</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const nav = document.querySelector('.nav');
+      const menuBtn = document.querySelector('[data-menu-toggle]');
+      if (menuBtn) menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+    })();
+  </script>
+</body>
+</html>
