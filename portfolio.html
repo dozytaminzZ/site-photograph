@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфолио фотографа Виктора Корнеплода: портреты, семьи, пары и бренды.">
+  <title>Better take photos at Viktor's — портфолио</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3.5" y="6.5" width="17" height="11" rx="3"></rect>
+            <path d="M8 6.5 9.7 4.5h4.6L16 6.5"></path>
+            <circle cx="12" cy="12" r="3.3"></circle>
+          </svg>
+        </span>
+        <span class="brand-text">Better take photos at Viktor's<br><small>photography</small></span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle>Меню</button>
+      <nav class="nav">
+        <a class="" href="./index.html">Главная</a>
+        <a class="active" href="./portfolio.html">Портфолио</a>
+        <a class="" href="./services.html">Услуги</a>
+        <a class="" href="./about.html">Обо мне</a>
+        <a class="" href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container section-title reveal">
+        <span class="eyebrow">Портфолио</span>
+        <h1 style="max-width: 13ch;">Кадры, в которых важны свет, ритм и человек</h1>
+        <p class="lead">Здесь собраны съёмки в разных форматах: портреты, семейные прогулки, студийные серии и контент для брендов. Мне близки чистые композиции, мягкие цвета и живое состояние в кадре.</p>
+      </div>
+      <div class="container gallery-grid">
+        <figure class="gallery-item tall reveal">
+          <img src="images/portret-estestvenniy-svet.jpg" alt="Портретная съёмка в естественном свете" width="900" height="1200" loading="lazy">
+          <figcaption>Портрет</figcaption>
+        </figure>
+        <figure class="gallery-item reveal d2">
+          <img src="images/semeynaya-semka-na-progulke.jpg" alt="Семейная съёмка на прогулке" width="900" height="700" loading="lazy">
+          <figcaption>Семья</figcaption>
+        </figure>
+        <figure class="gallery-item reveal d3">
+          <img src="images/studi-semka-myagki-svet.jpg" alt="Студийная съёмка с мягким светом" width="900" height="700" loading="lazy">
+          <figcaption>Студия</figcaption>
+        </figure>
+        <figure class="gallery-item wide reveal d4">
+          <img src="images/kontent-semka-predmetov.jpeg" alt="Контентная съёмка предметов для бренда" width="1200" height="700" loading="lazy">
+          <figcaption>Бренд-съёмка</figcaption>
+        </figure>
+        <figure class="gallery-item reveal d2">
+          <img src="images/luvstory-na-ulke.jpg" alt="Love story на улице" width="900" height="700" loading="lazy">
+          <figcaption>Пара</figcaption>
+        </figure>
+        <figure class="gallery-item reveal d3">
+          <img src="images/detali-predmet-semki.jpg" alt="Детали предметной съёмки" width="900" height="700" loading="lazy">
+          <figcaption>Детали</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-grid">
+        <article class="card reveal">
+          <span class="eyebrow">Моя обработка</span>
+          <h2>Чистый цвет и мягкая ретушь</h2>
+          <p>Я не люблю тяжёлые фильтры, которые быстро устаревают. Предпочитаю спокойный цвет, аккуратную работу с кожей и тон, который сохраняет ощущение реального момента.</p>
+        </article>
+        <article class="card reveal d2">
+          <span class="eyebrow">Результат</span>
+          <h2>Серия, которую хочется пересматривать</h2>
+          <p>Для меня важно, чтобы фотографии работали и по отдельности, и как цельная история. Поэтому я уделяю внимание не только красивым одиночным кадрам, но и общему ритму всей съёмки.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Better take photos at Viktor's — портретная, семейная и lifestyle-фотография в Томске.</p>
+      <div class="socials">
+        <a href="https://www.vk.com/" target="_blank" rel="noopener noreferrer">VK</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const nav = document.querySelector('.nav');
+      const menuBtn = document.querySelector('[data-menu-toggle]');
+      if (menuBtn) menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+    })();
+  </script>
+</body>
+</html>
